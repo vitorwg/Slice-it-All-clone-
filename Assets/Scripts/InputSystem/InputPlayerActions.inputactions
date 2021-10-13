@@ -1,0 +1,60 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "PC",
+            "id": "b4b113b6-ee29-4023-b736-9a82d4ab6cae",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "7b04cdd1-e387-406f-9f39-4e50dbf3ee0b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f384a3e7-20d6-419c-9969-9d88b37b70c5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "SmartPhone",
+            "id": "a9df581a-3e27-44d1-9bb9-c81f89fe51df",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "e579dd0b-248c-448c-81d5-a223913a1ad0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "14dfb33f-86f1-43ff-93c9-de7ba03f0996",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
