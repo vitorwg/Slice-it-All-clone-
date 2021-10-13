@@ -1,1 +1,1 @@
-# Slice-it-All-clone-
+# Slice it All (clone)
