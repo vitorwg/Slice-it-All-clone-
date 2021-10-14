@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c0b494cc658cf41a7851888683bdba, type: 3}
-  m_Name: KnifeConfig
+  m_Script: {fileID: 11500000, guid: ae37ed982e784f74fb5b4d9341efa9ae, type: 3}
+  m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _jumpForce: 1.5
-  _torqueForce: 4.3
+  _gravity: 0

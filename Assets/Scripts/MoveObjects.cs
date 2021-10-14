@@ -5,13 +5,15 @@ using UnityEngine;
 public class MoveObjects : MonoBehaviour
 {
     [SerializeField] private VelocityObjectConfigSO _objectConfigSO;
-    [SerializeField] private KnifeController _knifeController;
+    // [SerializeField] private KnifeController _knifeController;
 
     private bool _onKnifeSurface;
 
     private void Start()
     {
-        _knifeController.OnSurfaceEvent += KnifeOnSurface;
+        //_knifeController.OnSurfaceEvent += KnifeOnSurface;
+        // Can be a problem this event static
+        KnifeController.OnSurfaceEvent += KnifeOnSurface;
     }
 
     private void KnifeOnSurface(bool value)
@@ -25,6 +27,10 @@ public class MoveObjects : MonoBehaviour
         {
             transform.Translate(Vector3.back * _objectConfigSO.Velocity * Time.deltaTime);
         }
+    }
 
+    private void OnEnable()
+    {
+        KnifeController.OnSurfaceEvent -= KnifeOnSurface;
     }
 }

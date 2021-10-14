@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class KnifeController : MonoBehaviour
 {
-    public event UnityAction<bool> OnSurfaceEvent;
+    public static event UnityAction<bool> OnSurfaceEvent;
 
     [SerializeField] private KnifeConfigSO _knife;
 

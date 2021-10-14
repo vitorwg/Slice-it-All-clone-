@@ -19,7 +19,7 @@ public class SurfaceBehaviour : MonoBehaviour
     private void Start()
     {
         _inicialPosition = gameObject.transform.position;
-        _knifeController.OnSurfaceEvent += KnifeOnSurface;
+        //_knifeController.OnSurfaceEvent += KnifeOnSurface;
     }
 
     private void KnifeOnSurface(bool value)

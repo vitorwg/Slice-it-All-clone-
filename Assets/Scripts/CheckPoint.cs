@@ -5,12 +5,13 @@ using UnityEngine.Events;
 
 public class CheckPoint : MonoBehaviour
 {
-    public event UnityAction CheckPointEvent;
+    public static event UnityAction CheckPointEvent;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out KnifeController knifeController))
         {
+            Debug.Log("SpawnPoint: " + gameObject.name);
             CheckPointEvent?.Invoke();
         }
     }

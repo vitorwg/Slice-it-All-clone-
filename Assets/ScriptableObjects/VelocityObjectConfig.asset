@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d87b02fd90227e4090d8cfc2758a0ad, type: 3}
   m_Name: VelocityObjectConfig
   m_EditorClassIdentifier: 
-  _velocity: 0
+  _velocity: 1

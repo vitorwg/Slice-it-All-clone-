@@ -11,8 +11,6 @@ public class KnifeNotCuttable : MonoBehaviour
         _rigidbody = GetComponentInParent<Rigidbody>();
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out ObjectBehaviour objectBehaviour))
