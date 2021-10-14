@@ -5,20 +5,12 @@ using UnityEngine.Events;
 
 public class KnifeController : MonoBehaviour
 {
-    [SerializeField] private float _jumpForce;
-    [SerializeField] private float _torqueForce;
-    [SerializeField] private float _lerpRotation;
-
     public event UnityAction<bool> OnSurfaceEvent;
+
+    [SerializeField] private KnifeConfigSO _knife;
 
     private InputReader _inputReader;
     private Rigidbody _rigidbody;
-
-    private Quaternion _targetRotation;
-    private float _angleRotate = 45f;
-    private Quaternion startRotation;
-    private Quaternion endRotation;
-    private float rot;
 
     private void Awake()
     {
@@ -33,18 +25,15 @@ public class KnifeController : MonoBehaviour
 
     private void OnJump()
     {
-        _rigidbody.isKinematic = false;
+        _rigidbody.AddForce(Vector3.up * _knife.JumpForce, ForceMode.Impulse);
 
-        _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-
-        _rigidbody.AddTorque(transform.right * _torqueForce, ForceMode.VelocityChange);
+        _rigidbody.AddTorque(transform.right * _knife.TorqueForce, ForceMode.VelocityChange);
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Object enter " + collision.gameObject.name);
-
+        //Debug.Log("Object enter " + collision.gameObject.name);
 
         if(collision.gameObject.name == "Surface")
         {

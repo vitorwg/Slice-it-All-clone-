@@ -4,12 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class SurfaceBehaviour : MonoBehaviour
 {
-    [SerializeField] private float _velocity;
+    [SerializeField] private VelocityObjectConfigSO _objectConfigSO;
     [SerializeField] private KnifeController _knifeController;
 
     private Rigidbody _rigidbody;
     private Vector3 _inicialPosition;
-    private bool _onSurface = true;
+    private bool _onKnifeSurface;
 
     private void Awake()
     {
@@ -24,36 +24,29 @@ public class SurfaceBehaviour : MonoBehaviour
 
     private void KnifeOnSurface(bool value)
     {
-        Debug.Log(value);
-        _onSurface = value;
-    }
-
-    private void StopPlataform()
-    {
-        Debug.Log("StopMoving");
-
+        _onKnifeSurface = value;
         _rigidbody.velocity = Vector3.zero;
-
-        Debug.Log(_rigidbody.velocity);
     }
 
     private void FixedUpdate()
     {
-        if (!_onSurface)
+        if (!_onKnifeSurface)
         {
-            _rigidbody.velocity = Vector3.back * _velocity * Time.deltaTime;
+            //_rigidbody.velocity = Vector3.back * _velocity * Time.deltaTime;
+            transform.Translate(Vector3.back * _objectConfigSO.Velocity * Time.deltaTime);
+
         }
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(TryGetComponent<SurfaceBehaviour>(out SurfaceBehaviour plataform))
-        {
-            gameObject.transform.position = _inicialPosition;
-            Debug.Log(other.name);
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (TryGetComponent<SurfaceBehaviour>(out SurfaceBehaviour plataform))
+    //    {
+    //        gameObject.transform.position = _inicialPosition;
+    //        Debug.Log(other.name);
 
-        }
-    }
+    //    }
+    //}
 
 }
