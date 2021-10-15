@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6141889454537854632}
     m_Modifications:
+    - target: {fileID: 1203484183, guid: ba4824d87c438ac459f7c2b424a394e5, type: 3}
+      propertyPath: _knifeCuttable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1185662011340622957, guid: ba4824d87c438ac459f7c2b424a394e5,
         type: 3}
       propertyPath: m_Name
@@ -115,6 +119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6141889454537854632}
     m_Modifications:
+    - target: {fileID: 1203484183, guid: ba4824d87c438ac459f7c2b424a394e5, type: 3}
+      propertyPath: _knifeCuttable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1185662011340622957, guid: ba4824d87c438ac459f7c2b424a394e5,
         type: 3}
       propertyPath: m_Name
@@ -195,6 +203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6141889454537854632}
     m_Modifications:
+    - target: {fileID: 1203484183, guid: ba4824d87c438ac459f7c2b424a394e5, type: 3}
+      propertyPath: _knifeCuttable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1185662011340622957, guid: ba4824d87c438ac459f7c2b424a394e5,
         type: 3}
       propertyPath: m_Name

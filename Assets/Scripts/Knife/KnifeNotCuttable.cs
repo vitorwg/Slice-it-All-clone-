@@ -19,7 +19,7 @@ public class KnifeNotCuttable : MonoBehaviour
         {
             //Debug.Log(gameObject.name + "Colide with: " + other.gameObject.name);
             //_rigidbody.AddForce(Vector3.back * _rollBackForce, ForceMode.Impulse);
-            _rigidbody.AddTorque(-transform.right * _rollBackForce, ForceMode.Impulse);
+            _rigidbody.AddTorque(-transform.right * _rollBackForce, ForceMode.VelocityChange);
         }
     }
 }
