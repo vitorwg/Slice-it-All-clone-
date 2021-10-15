@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: GameLevelConfig
   m_EditorClassIdentifier: 
   _checkPoints: []
-  _testCheckPoints: []
-  _spawnPoints: []
+  _testCheckPoints:
+  - {fileID: 0}
+  _spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}

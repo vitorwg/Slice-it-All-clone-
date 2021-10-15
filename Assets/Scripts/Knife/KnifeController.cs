@@ -8,6 +8,9 @@ public class KnifeController : MonoBehaviour
     public static event UnityAction<bool> OnSurfaceEvent;
 
     [SerializeField] private KnifeConfigSO _knife;
+    [SerializeField] private AudioSource _collisionSurface;
+    [SerializeField] private AudioSource _airKnife;
+
 
     private InputReader _inputReader;
     private Rigidbody _rigidbody;
@@ -26,8 +29,8 @@ public class KnifeController : MonoBehaviour
     private void OnJump()
     {
         _rigidbody.AddForce(Vector3.up * _knife.JumpForce, ForceMode.Impulse);
-
         _rigidbody.AddTorque(transform.right * _knife.TorqueForce, ForceMode.VelocityChange);
+        _airKnife.Play();
     }
 
 
@@ -39,6 +42,7 @@ public class KnifeController : MonoBehaviour
         {
             //_rigidbody.isKinematic = true;
             OnSurfaceEvent?.Invoke(true);
+            _collisionSurface.Play();
         }
     }
 
