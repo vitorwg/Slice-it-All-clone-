@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class DeadZoneCollider : MonoBehaviour
 {
-    public event UnityAction GameOverEvent;
+    public static event UnityAction GameOverEvent;
 
     private void OnTriggerEnter(Collider other)
     {

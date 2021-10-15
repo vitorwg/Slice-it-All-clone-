@@ -30,8 +30,6 @@ public class InputReader : MonoBehaviour
         _inputActions.SmartPhone.Enable();
     }
 
-
-
     private void OnDisable()
     {
         _inputActions.PC.Disable();
