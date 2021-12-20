@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: KnifeConfig
   m_EditorClassIdentifier: 
   _jumpForce: 1.23
-  _torqueForce: 5.65
+  _torqueForce: 1.25
